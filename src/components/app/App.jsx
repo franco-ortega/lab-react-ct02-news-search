@@ -9,13 +9,13 @@ export default class App extends Component {
 
   render() {  
     return (
-      <>
+      <div data-testid="display">
         <h1>
         Welcome to the News Articles site!
         </h1>
         <NewsSearch />
         <NewsArticleList newsArticles={this.state.newsArticles}/>
-      </>
+      </div>
     );
   }
 }

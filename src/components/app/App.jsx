@@ -11,7 +11,7 @@ export default class App extends Component {
     return (
       <div data-testid="display">
         <h1>
-        Welcome to the News Articles site!
+        Welcome to the News Searcher!
         </h1>
         <NewsSearch />
         <NewsArticleList newsArticles={this.state.newsArticles}/>

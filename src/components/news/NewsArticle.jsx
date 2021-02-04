@@ -7,7 +7,6 @@ const NewsArticle = ({ author, title, description }) => (
     <p>by {author}</p>
     <p>{description}</p>
   </>
-
 );
 
 NewsArticle.propTypes = {

@@ -5,11 +5,10 @@ import { render, fireEvent, waitFor, screen } from '@testing-library/react';
 import NewsSearch from './NewsSearch';
 
 describe('NewsSearch component', () => {
-  
+
   it('creates a search', () => {
     render(<NewsSearch />);
 
-    // const display = screen.getByTestId('display');
     const input = screen.getByLabelText('search');
     const button = screen.getByRole('button');
 
@@ -27,16 +26,3 @@ describe('NewsSearch component', () => {
 
   });
 });
-
-
-
-
-
-// import userEvent from '@testing-library/user-event';
-//
-// const search = screen.getByPlaceholderTest('Search');
-// userEvent.type(search, 'cats');
-
-// return waitFor(() => {
-//   expect(screen.getByTestId('display')).not.toBeEmptyDOMElement();
-// });

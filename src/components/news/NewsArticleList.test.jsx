@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import NewsArticleList from './NewsArticleList';
-// global.fetch = require('node-fetch');
 
 describe('NewsArticleList component', () => {
   afterEach(() => cleanup());
@@ -9,6 +8,4 @@ describe('NewsArticleList component', () => {
     const { asFragment } = render(<NewsArticleList newsArticles={[]} />);
     expect(asFragment()).toMatchSnapshot();
   });
-
 });
-

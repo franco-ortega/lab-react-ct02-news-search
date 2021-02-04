@@ -1,15 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import NewsArticle from './NewsArticle';
 
-export default class NewsArticleList extends Component {
-  render() {
-    return (
-      <>
-        <h2>
-            This is a list of news article.
-        </h2>
-        <NewsArticle />
-      </>
-    );
-  }
-}
+const NewsArticleList = ({ newsArticles }) => {
+  const articleElements = newsArticles.map(newsArticle => (
+    <li key={newsArticle.title + Date.now()}>
+      <NewsArticle {...newsArticle}/>
+    </li>
+  ));
+
+  return (
+    <ul>
+      {articleElements}
+    </ul>
+  );
+};
+
+NewsArticleList.propTypes = {
+  newsArticles: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string,
+    description: PropTypes.string
+  })).isRequired
+};
+
+export default NewsArticleList;

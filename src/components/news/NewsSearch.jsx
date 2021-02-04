@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { getNewsArticles } from '../../services/newsApi';
+import NewsArticleList from './newsArticleList';
 
 export default class NewsSearch extends Component {
   state = {
     searchTerm: 'news',
-    newsArticles: []
+    newsArticles: [],
+    loading: false
   }
 
   handleChange = ({ target }) => {
@@ -14,11 +16,15 @@ export default class NewsSearch extends Component {
   handleSearchTermSubmit = (event) => {
     event.preventDefault();
     const { searchTerm } = this.state;
+
+    this.setState({ loading: true });
+
     getNewsArticles(searchTerm)
-      .then(newsArticles => this.setState({ newsArticles }));
+      .then(newsArticles => this.setState({ newsArticles, loading: false }));
   }
 
   render() {
+    console.log(this.state.newsArticles);
     return (
       <>
         Search for news articles:
@@ -30,6 +36,7 @@ export default class NewsSearch extends Component {
             value={this.state.searchTerm} />
           <button>Search</button>
         </form>
+        <NewsArticleList newsArticles={this.state.newsArticles}/>
       </>
     );
   }

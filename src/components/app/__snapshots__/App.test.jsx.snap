@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders App 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="display"
+  >
+    <h1>
+      Welcome to the News Articles site!
+    </h1>
+    Search for news articles:
+    <form>
+      <input
+        placeholder="search the news"
+        type="text"
+        value="news"
+      />
+      <button>
+        Search
+      </button>
+    </form>
+    <ul />
+    <ul />
+  </div>
+</DocumentFragment>
+`;

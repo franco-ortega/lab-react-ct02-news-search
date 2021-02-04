@@ -10,7 +10,14 @@ exports[`App component renders App 1`] = `
     </h1>
     Search for news articles:
     <form>
+      <label
+        for="search"
+        name="search"
+      >
+        search
+      </label>
       <input
+        id="search"
         placeholder="search the news"
         type="text"
         value="news"
@@ -19,8 +26,12 @@ exports[`App component renders App 1`] = `
         Search
       </button>
     </form>
-    <ul />
-    <ul />
+    <ul
+      data-testid="display"
+    />
+    <ul
+      data-testid="display"
+    />
   </div>
 </DocumentFragment>
 `;

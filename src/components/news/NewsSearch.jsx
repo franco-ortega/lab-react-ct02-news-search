@@ -26,9 +26,12 @@ export default class NewsSearch extends Component {
   render() {
     return (
       <>
+        {this.loading && <h1>Loading...please wait. Thank you.</h1>}
         Search for news articles:
         <form onSubmit={this.handleSearchTermSubmit}>
+          <label htmlFor="search" name="search">search</label>
           <input
+            id="search"
             onChange={this.handleChange}
             type="text"
             placeholder="search the news"

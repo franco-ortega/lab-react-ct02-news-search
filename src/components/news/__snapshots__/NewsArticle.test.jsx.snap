@@ -2,10 +2,14 @@
 
 exports[`NewsArticle component renders NewsArticle 1`] = `
 <DocumentFragment>
-  <h3 />
+  <h3>
+    a title
+  </h3>
   <p>
     by 
   </p>
-  <p />
+  <p>
+    that description
+  </p>
 </DocumentFragment>
 `;

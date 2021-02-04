@@ -7,9 +7,9 @@ describe('NewsArticle component', () => {
   afterEach(() => cleanup());
   it('renders NewsArticle', () => {
     const { asFragment } = render(<NewsArticle
-      title
-      article
-      description />);
+      title="a title"
+      article="this article"
+      description="that description" />);
     expect(asFragment()).toMatchSnapshot();
   });
 

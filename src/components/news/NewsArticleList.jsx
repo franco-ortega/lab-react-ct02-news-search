@@ -10,7 +10,7 @@ const NewsArticleList = ({ newsArticles }) => {
   ));
 
   return (
-    <ul>
+    <ul data-testid="display">
       {articleElements}
     </ul>
   );

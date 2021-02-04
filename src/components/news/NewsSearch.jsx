@@ -24,7 +24,6 @@ export default class NewsSearch extends Component {
   }
 
   render() {
-    console.log(this.state.newsArticles);
     return (
       <>
         Search for news articles:

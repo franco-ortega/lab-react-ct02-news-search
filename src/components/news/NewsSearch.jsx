@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { getNewsArticles } from '../../services/newsApi';
-import NewsArticleList from './newsArticleList';
+import NewsArticleList from './NewsArticleList';
 
 export default class NewsSearch extends Component {
   state = {
